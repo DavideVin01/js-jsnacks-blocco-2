@@ -4,14 +4,13 @@
 
 const array = [10, 5, 3, 20, 15, 25, 34, 12];
 let sum = 0;
-let num;
 
-const arrayOdd = [];
-
-let i = 1;
+let i = 0;
 while (i < array.length) {
-    console.log('Numero in posizione dispari:', array[i]);
-    sum += array[i];
-    i += 2;
+    if (i % 2 !== 0) {
+        sum += array[i];
+        console.log('Numero in posizione dispari:', array[i]);
+    }
+    i++;
 }
 console.log('La somma è', sum);
